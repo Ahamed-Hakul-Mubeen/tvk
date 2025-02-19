@@ -250,7 +250,7 @@ $(document).ready(function () {
                         $('#id').val(data.data.id);
                         $('#title').val(data.data.title);
                         $('#description').val(data.data.description);
-                        if(data.data.attachment != "")
+                        if(data.data.attachment != "" && data.data.attachment != null)
                         {
                             $('.image-preview').html(`<img src="${data.data.attachment}" id="attachment" alt="Attachment">`)
                         }else{
@@ -268,28 +268,6 @@ $(document).ready(function () {
             })
         }else{
             notifyWarning('Something went wrong')
-        }
-    })
-    $(document).on('click', '.edit-announcement', function () {
-        let id = $(this).attr('data-id');
-        if(id != "")
-        {
-            $.ajax({
-                type: "POST",
-                url: "{{ route('announcement.delete') }}",
-                data: {id},
-                success: function (data) {
-                    if (data.success == "1") {
-                        notifySuccess(data.message);
-                    } else {
-                        if (data.error != "") {
-                            notifyWarning(data.error[0]);
-                        } else {
-                            notifyWarning(data.message);
-                        }
-                    }
-                }
-            })
         }
     })
     document.getElementById("image").addEventListener("change", function(event) {

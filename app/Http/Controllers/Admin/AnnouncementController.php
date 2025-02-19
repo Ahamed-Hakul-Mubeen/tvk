@@ -27,7 +27,7 @@ class AnnouncementController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required',
             'description' => 'required',
-            'image' => 'required|mimes:jpg,png,jpeg',
+            'image' => 'mimes:jpg,png,jpeg',
         ]);
         if(!$validator->fails()){
             $msg ="";
