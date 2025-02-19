@@ -6,7 +6,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Nalan Enterprise</title>
+    <title>TVK</title>
 
     <meta name="description" content="" />
 
@@ -43,10 +43,10 @@
     <style>
         body{
             background-color: #dededc;
-            background-image: url('assets/img/backgrounds/bg.jpg');
+            /* background-image: url('assets/img/backgrounds/bg.jpg');
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: right;
+            background-position: right; */
         }
     </style>
 </head>
