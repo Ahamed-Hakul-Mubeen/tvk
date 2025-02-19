@@ -115,6 +115,15 @@
 </div>
 {{-- end status modal --}}
 @endsection
+@push('css')
+<style>
+    .image-preview img{
+        width: 200px;
+        height: auto;
+        object-fit: cover;
+    }
+</style>
+@endpush
 @push('js')
 <script>
 $(document).ready(function () {
